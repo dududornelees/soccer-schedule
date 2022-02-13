@@ -1,11 +1,7 @@
-import { View, Text } from "react-native";
+import Routes from "./src/routes/Routes";
 
 const App: React.FC = () => {
-  return (
-    <View>
-      <Text>App!</Text>
-    </View>
-  );
+  return <Routes />;
 };
 
 export default App;
