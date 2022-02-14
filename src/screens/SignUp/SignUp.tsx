@@ -1,5 +1,14 @@
-import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Button,
+  Alert,
+} from "react-native";
 import LottieView from "lottie-react-native";
+import auth from "@react-native-firebase/auth";
 
 // Styles
 import { styles } from "./styles";
@@ -16,6 +25,16 @@ interface Props {
 }
 
 const SignUp: React.FC<Props> = ({ navigation }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleNewAccount = () => {
+    auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => Alert.alert("Conta", "Cadastrado com sucesso!"))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <View style={styles.signInContainer}>
       <View style={styles.logoContainer}>
@@ -33,11 +52,34 @@ const SignUp: React.FC<Props> = ({ navigation }) => {
           Insira seus dados e crie uma conta!
         </Text>
 
-        <TextInput style={styles.formInput} placeholder="Email:" />
-        <TextInput style={styles.formInput} placeholder="Senha:" />
+        <TextInput
+          style={styles.formInput}
+          placeholder="Email:"
+          defaultValue={email}
+          onChangeText={(e) => {
+            setEmail(e);
+          }}
+        />
+
+        <TextInput
+          secureTextEntry={true}
+          style={styles.formInput}
+          placeholder="Senha:"
+          defaultValue={password}
+          onChangeText={(e) => {
+            setPassword(e);
+          }}
+        />
 
         <TouchableOpacity style={styles.formSubmitBtn}>
-          <Text style={styles.formSubmitBtnText}>Criar</Text>
+          <Text
+            style={styles.formSubmitBtnText}
+            onPress={() => {
+              handleNewAccount();
+            }}
+          >
+            Criar
+          </Text>
         </TouchableOpacity>
 
         <View style={styles.formOptions}>
