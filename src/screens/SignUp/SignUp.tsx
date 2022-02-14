@@ -4,8 +4,8 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
-  Button,
   Alert,
+  ScrollView,
 } from "react-native";
 import LottieView from "lottie-react-native";
 import auth from "@react-native-firebase/auth";
@@ -36,7 +36,7 @@ const SignUp: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.signInContainer}>
+    <ScrollView style={styles.signUpContainer}>
       <View style={styles.logoContainer}>
         <LottieView
           style={styles.animatedLogo}
@@ -94,7 +94,7 @@ const SignUp: React.FC<Props> = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

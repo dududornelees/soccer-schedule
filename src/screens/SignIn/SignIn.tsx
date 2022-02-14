@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Alert,
+  ScrollView,
+} from "react-native";
 import LottieView from "lottie-react-native";
 import auth from "@react-native-firebase/auth";
 
@@ -41,7 +48,7 @@ const SignIn: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.signInContainer}>
+    <ScrollView contentContainerStyle={styles.signInContainer}>
       <View style={styles.logoContainer}>
         <LottieView
           style={styles.animatedLogo}
@@ -107,7 +114,7 @@ const SignIn: React.FC<Props> = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

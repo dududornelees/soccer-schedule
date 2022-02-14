@@ -2,23 +2,20 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   signInContainer: {
-    flex: 1,
     padding: 25,
     backgroundColor: "#F3F3F7",
   },
 
   logoContainer: {
-    flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },
 
   animatedLogo: {
-    width: 255,
+    width: 270,
   },
 
   formContainer: {
-    flex: 1,
     justifyContent: "center",
     width: "100%",
   },
