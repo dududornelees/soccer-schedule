@@ -7,7 +7,7 @@ import AuthRoutes from "./Auth.routes";
 const Routes: React.FC = () => {
   return (
     <NavigationContainer>
-      <Home />
+      <AuthRoutes />
     </NavigationContainer>
   );
 };
