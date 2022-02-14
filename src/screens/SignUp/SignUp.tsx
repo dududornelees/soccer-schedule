@@ -14,7 +14,7 @@ import auth from "@react-native-firebase/auth";
 import { styles } from "./styles";
 
 // Animations
-import animatedLogo from "../../images/logos/sign-up-logo.json";
+import animatedLogo from "../../assets/logos/sign-up-logo.json";
 
 // Icons
 import IconAnt from "react-native-vector-icons/AntDesign";

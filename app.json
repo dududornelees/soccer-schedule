@@ -1,9 +1,13 @@
 {
   "expo": {
-    "name": "soccer-schedule",
+    "name": "Soccer Schedule",
     "slug": "soccer-schedule",
     "version": "1.0.0",
     "assetBundlePatterns": ["**/*"],
-    "android": { "softwareKeyboardLayoutMode": "pan" }
+    "icon": "./src/assets/logos/logo.png",
+    "android": {
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.soccerschedule"
+    }
   }
 }
