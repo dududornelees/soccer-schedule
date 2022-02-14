@@ -44,7 +44,7 @@ const SignIn: React.FC<Props> = ({ navigation }) => {
           "Enviamos um email para redefinição de senha"
         );
       })
-      .catch((err) => console.log(err));
+      .catch((err) => Alert.alert(err));
   };
 
   return (
