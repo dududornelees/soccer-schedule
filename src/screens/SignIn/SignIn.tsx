@@ -11,7 +11,12 @@ import animatedLogo from "../../images/logos/sign-in-logo.json";
 import IconAnt from "react-native-vector-icons/AntDesign";
 import IconFontiso from "react-native-vector-icons/Fontisto";
 
-const SignIn: React.FC = () => {
+// Interface
+interface Props {
+  navigation: any;
+}
+
+const SignIn: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.signInContainer}>
       <View style={styles.logoContainer}>
@@ -37,7 +42,12 @@ const SignIn: React.FC = () => {
         </TouchableOpacity>
 
         <View style={styles.formOptions}>
-          <TouchableOpacity style={styles.formOptionsBtn}>
+          <TouchableOpacity
+            style={styles.formOptionsBtn}
+            onPress={() => {
+              navigation.navigate("signUp");
+            }}
+          >
             <IconAnt name="adduser" style={styles.formIcon} />
             <Text style={styles.formOptionsText}>Criar conta</Text>
           </TouchableOpacity>

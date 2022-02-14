@@ -3,8 +3,7 @@
     "name": "soccer-schedule",
     "slug": "soccer-schedule",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "android": { "softwareKeyboardLayoutMode": "pan" }
   }
 }

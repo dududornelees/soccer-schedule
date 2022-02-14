@@ -40,6 +40,8 @@ export const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 10,
     marginBottom: 15,
+    borderWidth: 1,
+    borderColor: "#CCCCCC",
   },
 
   formSubmitBtn: {
@@ -72,7 +74,7 @@ export const styles = StyleSheet.create({
   formIcon: {
     fontSize: 20,
     color: "#349C7C",
-    marginRight: 3,
+    marginRight: 5,
   },
 
   formOptionsText: {
